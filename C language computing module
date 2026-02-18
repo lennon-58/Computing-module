@@ -1,0 +1,343 @@
+#include <stdio.h>
+
+int main() {
+    printf("       wWWWw              wWWWw\n");
+    printf("vVVVv  (___) wWWWw        (___)  vVVVv\n");
+    printf("(___)   ~Y~  (___)  vVVVv  ~Y~   (___)\n");
+    printf(" ~Y~    \\|    ~Y~   (___)   |/    ~Y~\n");
+    printf(" \\|    \\ |/   \\| /  \\~Y~/  \\|    \\ |/\n");
+    printf("\\\\|//  \\\\|// \\\\|/// \\\\|// \\\\|// \\\\\\|///\n");
+    printf("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    printf("         ((`\\\n");
+    printf("      ___ \\\\ '--._\n");
+    printf("  .'`    `'    o  )\n");
+    printf("  /    \\   '. __.'\n");
+    printf(" _|    /_  \\ \\_\\_\n");
+    printf("{_\\______\\-'\\__\\_}\n");
+
+    return 0;
+}
+
+
+int main() {
+    double a=1;
+    double b=2 ;
+    double c=3;
+    double x;
+
+    x = a + b + c;
+    printf("a) x = %f\n", x);
+
+    x=a/b+c;
+    printf("b) x=%f\n",x);
+
+    x = a * b * c;
+    printf("c) x = %f\n", x);
+
+    x = (a + 1.0) * (b + 2.0) * (c - 10.0);
+    printf("d) x = %f\n", x);
+
+    x = (a + b) / c;
+    printf("e) x = %f\n", x);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int l = 108;
+    int e = 101;
+    int n = 110;
+    int o = 111;
+
+    printf("My name is: %c%c%c%c%c%c\n", l, e, n, n, o, n);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    double time;
+    double distance;
+    double speed_of_light = 299792458.0;
+
+    printf("How long the space ship has been traveling at warp seed? ");
+
+    scanf("%lf", &time);
+
+    distance = time * speed_of_light;
+
+    printf("The distance traveled is: %lf meters.\n", distance);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+   int i=0;
+   for(i=0;i<101;i++)
+   {
+      printf("%d\n", i);}
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int i;
+    int sum = 0;
+
+    for(i = 1; i <= 100; i++) {
+        sum = sum + i;
+    }
+
+    printf("%d\n", sum);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    double count = 0.0;
+
+    while (count <= 100.0) {
+        printf("%.2lf\n", count);
+        count = count + 0.25;
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    double count = 0.0;
+
+    while (count >= -100.0) {
+        printf("%.1lf\n", count);
+        count = count - 0.5;
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for (i = 0; i <= 10; i++) {
+        printf("%d\n", i);
+    }
+
+    for (i = 10; i >= 0; i--) {
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int a = 0;
+    
+    printf("Type a number: ");
+    scanf("%d", &a);
+    
+    if (a == 10) {
+        printf("Oh that's number 10\n");
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, b, c;
+    double discriminant, x1, x2;
+
+    printf("Enter value for a: ");
+    scanf("%lf", &a);
+    printf("Enter value for b: ");
+    scanf("%lf", &b);
+    printf("Enter value for c: ");
+    scanf("%lf", &c);
+
+    discriminant = (b * b) - (4 * a * c);
+
+    if (discriminant < 0) {
+        printf("Ooh, that will be a complex number I can’t do that\n");
+    } else {
+        x1 = (-b + sqrt(discriminant)) / (2 * a);
+        x2 = (-b - sqrt(discriminant)) / (2 * a);
+
+        printf("x1 = %lf\n", x1);
+        printf("x2 = %lf\n", x2);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int a=0;
+    printf("Input a temperature.");
+    scanf("%d", &a);
+
+    if(a>1413)
+    printf(". Hotter than the boiling point of salt");
+    return 0;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main() {
+    int choice;
+    int seconds;
+
+    printf("How would you like your boiled egg, raw (0), very runny (1), runny (2), hard (3), rock hard (4). Please select an option 0-4: ");
+    scanf("%d", &choice);
+
+    if (choice == 0) {
+        seconds = 5;
+    } else if (choice == 1) {
+        seconds = 30;
+    } else if (choice == 2) {
+        seconds = 60;
+    } else if (choice == 3) {
+        seconds = 120;
+    } else if (choice == 4) {
+        seconds = 360;
+    } else {
+        printf("I don’t know what to do!\n");
+        return -1;
+    }
+
+    for (int i = seconds; i >= 1; i--) {
+        printf("%d...\n", i);
+        fflush(stdout);
+        sleep(1);
+    }
+
+    printf("Your egg is finished!\n");
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    double numbers[] = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0};
+
+    printf("0th element: %.1lf\n", numbers[0]);
+    printf("6th element: %.1lf\n", numbers[5]);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int numbers[] = {1, 2, 3, 4, 5, 6, 7};
+
+    printf("Initial: %d %d %d %d %d %d %d\n", 
+           numbers[0], numbers[1], numbers[2], numbers[3], 
+           numbers[4], numbers[5], numbers[6]);
+
+    numbers[3] = 7;
+    numbers[4] = 7;
+
+    printf("Final:   %d %d %d %d %d %d %d\n", 
+           numbers[0], numbers[1], numbers[2], numbers[3], 
+           numbers[4], numbers[5], numbers[6]);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int numbers[] = {1, 2, 3, 4, 5, 6, 7};
+    int i;
+
+    for (i = 0; i < 7; i++) {
+        numbers[i] = 0;
+    }
+
+    for (i = 0; i < 7; i++) {
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <math.h>
+int main(){
+   double x=1.5;
+
+   double a=sin(x);
+   printf("a)x= %f\n", a);
+
+   double y=sin(x)*cos(x);
+   printf("b)y= %f\n", y);
+
+   double z=pow(sin(x),2);
+   printf("c)z= %f\n", z);
+
+   double v=(cos(2*x)+10*sin(x))*100;
+   printf("d)v= %f\n", v);
+
+   double t = (10 * pow(x, 3)) + (20 * pow(x, 2)) + (10 * pow(x, 1)) + 10;
+   printf("e)t= %f\n", t);
+
+   double r=exp(x);
+   printf("f)r= %f\n", z);
+
+   double w=exp(sin(x));
+   printf("g)w= %f\n",w);
+}
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double t[20];
+    double y[20];
+    int i = 0;
+    double current_t = 0.0;
+
+    while (i < 20) {
+        t[i] = current_t;
+        current_t += 0.1;
+        i++;
+    }
+
+    for (int j = 0; j < 20; j++) {
+        y[j] = 2.0 * sin(2.0 * t[j]);
+    }
+
+    printf("t\               y\n");
+    for (int k = 0; k < 20; k++) {
+        printf("%f\t%f\n", t[k], y[k]);
+    }
+
+    return 0;
+}
